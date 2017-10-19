@@ -41,6 +41,11 @@ module CfnDsl
             'Value'       => { 'PrimitiveType' => 'String' }
           }
         },
+        'AWS::SSM::PatchBaseline' => {
+          'Properties' => {
+            'PatchGroups' => { 'Type' => 'List', 'PrimitiveItemType' => 'String', 'ItemType' => nil }
+          }
+        },
         'AWS::EC2::VPNGatewayConnection' => {
           'Properties' => {
             'Type' => { 'PrimitiveType' => 'String' },
